@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <style type="text/css">
+      body {
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .enlinea {
+        clear: none;
+      }
+      .enlinea > * {
+        display: inline !important;
+      }
+
+      #principal {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="pure-g">
+    <div class="pure-u-1-4" id="principal">
+      <form class="pure-form pure-form-stacked">
+        <legend>Dimensiones</legend>
+        <label for="ancho">Ancho</label>
+        <input name="ancho" type="number" value="10" min="1" max="50" />
+        <label for="alto">Alto</label>
+        <input name="alto" type="number" value="10" min="1" max="50" />
+        <legend>Palabras</legend>
+        <div id="palabras"></div>
+        <button class="pure-button" id="btn-nueva-palabra">Añadir</button>
+        <button class="pure-button" id="btn-generar">Generar</button>
+        <button class="pure-button" id="btn-descargar">Descargar</button>
+      </form>
+    </div>
+    <div class="pure-u-3-4" id="sopa"></div>
+    <script type="text/javascript" lang="javascript" src="svg.js"></script>
+    <script type="text/javascript" lang="javascript" src="tablero.js"></script>
+    <script type="text/javascript" lang="javascript" src="ui.js"></script>
+    <script type="text/javascript" lang="javascript" src="FileSaver.js"></script>
+  </body>
+</html>
